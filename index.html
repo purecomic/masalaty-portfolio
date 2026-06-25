@@ -875,6 +875,11 @@
   function saveProjects() { localStorage.setItem('mws_projects', JSON.stringify(projects)); }
   function saveMessages() { localStorage.setItem('mws_messages', JSON.stringify(messages)); }
 
+  // Secret admin reveal
+  if (window.location.hash === '#admin') {
+    document.getElementById('adminBtn').style.display = 'flex';
+  }
+
   // ============================================================
   // TOAST
   // ============================================================
