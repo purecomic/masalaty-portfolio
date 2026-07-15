@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel — Kingsley Web Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div class="login-screen" id="login-screen">
+    <div class="login-card">
+      <div class="login-logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+      </div>
+      <h1 class="login-title">Admin Panel</h1>
+      <p class="login-sub">Kingsley Web Studio</p>
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-input" id="login-password" placeholder="Enter admin password" />
+        <p class="login-error" id="login-error">Incorrect password. Try again.</p>
+      </div>
+      <button class="btn btn-primary" onclick="adminLogin()" style="width:100%;justify-content:center;margin-top:8px;">
+        Login
+      </button>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD -->
+  <div class="admin-layout" id="admin-dashboard" style="display:none">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-icon-sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </span>
+        KWS Admin
+      </div>
+      <nav class="sidebar-nav">
+        <button class="sidebar-btn active" onclick="showTab('about')">👤 About Me</button>
+        <button class="sidebar-btn" onclick="showTab('services')">💼 Services</button>
+        <button class="sidebar-btn" onclick="showTab('projects')">🗂 Projects</button>
+        <button class="sidebar-btn" onclick="showTab('contact')">📞 Contact</button>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="index.html" class="btn btn-outline btn-sm" style="width:100%;justify-content:center;">← View Site</a>
+        <button class="btn-logout" onclick="adminLogout()">Logout</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+
+      <!-- ABOUT TAB -->
+      <div class="tab-panel active" id="tab-about">
+        <div class="panel-header">
+          <h2>About Me</h2>
+          <button class="btn btn-primary btn-sm" onclick="saveAbout()">Save Changes</button>
+        </div>
+
+        <div class="panel-body">
+          <div class="form-group">
+            <label class="form-label">Profile Photo</label>
+            <div class="photo-upload-wrap">
+              <img src="photo.jpg" alt="Profile" class="photo-preview" id="photo-preview" />
+              <div class="photo-upload-btn">
+                <input type="file" id="photo-input" accept="image/*" onchange="previewPhoto(event)" style="display:none" />
+                <button class="btn btn-outline btn-sm" onclick="document.getElementById('photo-input').click()">Change Photo</button>
+                <p class="form-hint">JPG or PNG. Will be saved as photo.jpg in your project.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Section Title</label>
+            <input type="text" class="form-input" id="admin-about-title" placeholder="The Developer Behind the Studio" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Bio Paragraph 1</label>
+            <textarea class="form-input form-textarea" id="admin-bio1" rows="4" placeholder="Write your first bio paragraph..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Bio Paragraph 2</label>
+            <textarea class="form-input form-textarea" id="admin-bio2" rows="4" placeholder="Write your second bio paragraph..."></textarea>
+          </div>
+        </div>
+
+        <div class="save-toast" id="toast-about">✓ About section saved!</div>
+      </div>
+
+      <!-- SERVICES TAB -->
+      <div class="tab-panel" id="tab-services">
+        <div class="panel-header">
+          <h2>Services & Pricing</h2>
+          <button class="btn btn-primary btn-sm" onclick="saveServices()">Save Changes</button>
+        </div>
+        <div class="panel-body" id="services-editor">
+          <!-- Rendered by JS -->
+        </div>
+        <div class="save-toast" id="toast-services">✓ Services saved!</div>
+      </div>
+
+      <!-- PROJECTS TAB -->
+      <div class="tab-panel" id="tab-projects">
+        <div class="panel-header">
+          <h2>Projects</h2>
+          <button class="btn btn-primary btn-sm" onclick="addProject()">+ Add Project</button>
+        </div>
+        <div class="panel-body" id="projects-editor">
+          <!-- Rendered by JS -->
+        </div>
+        <div class="save-toast" id="toast-projects">✓ Projects saved!</div>
+      </div>
+
+      <!-- CONTACT TAB -->
+      <div class="tab-panel" id="tab-contact">
+        <div class="panel-header">
+          <h2>Contact Info</h2>
+          <button class="btn btn-primary btn-sm" onclick="saveContact()">Save Changes</button>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label class="form-label">WhatsApp Number</label>
+            <input type="text" class="form-input" id="admin-whatsapp" placeholder="2348024531430" />
+            <p class="form-hint">Include country code, no + symbol. E.g. 2348024531430</p>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Location</label>
+            <input type="text" class="form-input" id="admin-location" placeholder="Nigeria 🇳🇬" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Response Time</label>
+            <input type="text" class="form-input" id="admin-response" placeholder="Within 24 hours" />
+          </div>
+        </div>
+        <div class="save-toast" id="toast-contact">✓ Contact info saved!</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

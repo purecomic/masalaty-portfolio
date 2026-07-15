@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kingsley Web Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- BACKGROUND SHAPES -->
+  <div class="bg-shapes" aria-hidden="true">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand">
+        <span class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </span>
+        Kingsley Web Studio
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home"     class="nav-link active">Home</a>
+        <a href="#about"    class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact"  class="nav-link">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-up" style="--delay:0.1s">
+            <span class="badge-dot"></span>
+            Available for new projects
+          </div>
+          <h1 class="hero-headline animate-fade-up" style="--delay:0.25s">
+            Professional Websites That Help Your
+            <span class="headline-accent">Business Grow</span>
+          </h1>
+          <p class="hero-description animate-fade-up" style="--delay:0.4s">
+            Hi, I'm Kingsley, a web developer from Nigeria. I create fast, responsive, and
+            modern websites for businesses, brands, and individuals.
+          </p>
+          <div class="hero-buttons animate-fade-up" style="--delay:0.55s">
+            <a href="#projects" class="btn btn-primary">
+              View My Work
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">Hire Me</a>
+          </div>
+          <div class="hero-stats animate-fade-up" style="--delay:0.7s">
+            <div class="stat"><span class="stat-number">20+</span><span class="stat-label">Projects Built</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-number">15+</span><span class="stat-label">Happy Clients</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-number">3+</span><span class="stat-label">Years Experience</span></div>
+          </div>
+        </div>
+        <div class="hero-visual animate-fade-left" style="--delay:0.3s">
+          <div class="visual-card">
+            <div class="editor-window">
+              <div class="editor-topbar">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="editor-filename">index.js</span>
+              </div>
+              <div class="editor-body">
+                <div class="code-line"><span class="ln">1</span><span class="kw">const</span> <span class="fn">buildWebsite</span> = <span class="kw">async</span> () <span class="op">=&gt;</span> {</div>
+                <div class="code-line"><span class="ln">2</span>  <span class="kw">const</span> design = <span class="st">"modern"</span>;</div>
+                <div class="code-line"><span class="ln">3</span>  <span class="kw">const</span> speed = <span class="st">"blazing fast"</span>;</div>
+                <div class="code-line"><span class="ln">4</span>  <span class="kw">const</span> result = <span class="kw">await</span></div>
+                <div class="code-line"><span class="ln">5</span>    deliver({ design, speed });</div>
+                <div class="code-line"><span class="ln">6</span>  <span class="kw">return</span> result;</div>
+                <div class="code-line"><span class="ln">7</span>};</div>
+                <div class="code-line empty"><span class="ln">8</span></div>
+                <div class="code-line"><span class="ln">9</span><span class="fn">buildWebsite</span>();<span class="cursor-blink">|</span></div>
+              </div>
+            </div>
+            <div class="floating-pill pill-1">⚛ React</div>
+            <div class="floating-pill pill-2">▲ Next.js</div>
+            <div class="floating-pill pill-3">🎨 UI/UX</div>
+            <div class="floating-pill pill-4">🚀 Node.js</div>
+            <div class="glow-ring"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator animate-fade-up" style="--delay:1s">
+        <span>Scroll</span>
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="container about-container">
+
+        <div class="about-image-wrap">
+          <div class="about-img-ring"></div>
+          <img src="photo.jpg" alt="Kingsley" class="about-img" id="about-photo" />
+          <div class="about-img-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Open to Work
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title" id="about-title">The Developer Behind the Studio</h2>
+          <p class="about-bio" id="about-bio">
+            I'm Kingsley, a self-taught web developer based in Nigeria with over 3 years of experience building modern digital products. I specialize in creating fast, beautiful, and functional websites that help businesses establish a strong online presence.
+          </p>
+          <p class="about-bio" id="about-bio2">
+            From simple landing pages to full-stack web applications, I bring ideas to life with clean code and pixel-perfect design. I work independently and build everything from my Android device using Termux — proving that great work doesn't require expensive equipment, just dedication.
+          </p>
+
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-icon">⚛</span> React / Next.js</div>
+            <div class="skill-item"><span class="skill-icon">🎨</span> HTML / CSS / JS</div>
+            <div class="skill-item"><span class="skill-icon">🗄</span> Supabase / SQL</div>
+            <div class="skill-item"><span class="skill-icon">🚀</span> Node.js / API</div>
+            <div class="skill-item"><span class="skill-icon">📱</span> Responsive Design</div>
+            <div class="skill-item"><span class="skill-icon">▲</span> Vercel Deploy</div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary" style="width:fit-content;margin-top:8px;">
+            Let's Work Together
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SERVICES / PRICING ===== -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Services & Pricing</div>
+          <h2 class="section-title">Choose the Right Package</h2>
+          <p class="section-subtitle">Transparent pricing. No hidden fees. Every website is built with care and delivered on time.</p>
+        </div>
+
+        <div class="pricing-grid" id="pricing-grid">
+
+          <div class="pricing-card">
+            <div class="pricing-icon">🌐</div>
+            <h3 class="pricing-name">Basic Website</h3>
+            <p class="pricing-desc">Perfect for individuals, small businesses, and personal brands who need a clean online presence.</p>
+            <div class="pricing-price"><span class="price-currency">₦</span>60,000<span class="price-suffix">+</span></div>
+            <ul class="pricing-features">
+              <li>✓ Up to 5 pages</li>
+              <li>✓ Responsive design</li>
+              <li>✓ Contact form</li>
+              <li>✓ SEO basics</li>
+              <li>✓ Fast delivery</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+          </div>
+
+          <div class="pricing-card pricing-popular">
+            <div class="popular-badge">Most Popular</div>
+            <div class="pricing-icon">⚡</div>
+            <h3 class="pricing-name">Standard Website</h3>
+            <p class="pricing-desc">For businesses that need more pages, better design, and custom features.</p>
+            <div class="pricing-price"><span class="price-currency">₦</span>100,000<span class="price-suffix">+</span></div>
+            <ul class="pricing-features">
+              <li>✓ Up to 10 pages</li>
+              <li>✓ Premium UI design</li>
+              <li>✓ Animations & effects</li>
+              <li>✓ Blog integration</li>
+              <li>✓ Google Analytics</li>
+              <li>✓ Priority support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-icon">🛒</div>
+            <h3 class="pricing-name">E-Commerce Store</h3>
+            <p class="pricing-desc">Full online store with product listings, cart, and payment integration.</p>
+            <div class="pricing-price"><span class="price-currency">₦</span>150,000<span class="price-suffix">+</span></div>
+            <ul class="pricing-features">
+              <li>✓ Product catalogue</li>
+              <li>✓ Shopping cart</li>
+              <li>✓ Payment gateway</li>
+              <li>✓ Order management</li>
+              <li>✓ Admin dashboard</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-icon">🔧</div>
+            <h3 class="pricing-name">Full Stack App</h3>
+            <p class="pricing-desc">Complete web application with database, backend, user auth, and admin panel.</p>
+            <div class="pricing-price"><span class="price-currency">₦</span>250,000<span class="price-suffix">+</span></div>
+            <ul class="pricing-features">
+              <li>✓ Custom backend/API</li>
+              <li>✓ Database integration</li>
+              <li>✓ User authentication</li>
+              <li>✓ Admin dashboard</li>
+              <li>✓ Scalable architecture</li>
+              <li>✓ Full documentation</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Portfolio</div>
+          <h2 class="section-title">Projects I've Built</h2>
+          <p class="section-subtitle">A selection of real websites and apps I've designed and developed.</p>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <div class="project-placeholder" style="background:linear-gradient(135deg,#1e3a5f,#3B82F6)">
+                <span>💰</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Full Stack</span>
+              <h3 class="project-name">BIG EARN</h3>
+              <p class="project-desc">A crypto investment platform built with Next.js 14 and Supabase with real-time dashboards and user authentication.</p>
+              <div class="project-links">
+                <a href="https://bigearn.vercel.app" target="_blank" class="btn btn-primary btn-sm">Live Site</a>
+                <a href="https://github.com/purecomic" target="_blank" class="btn btn-outline btn-sm">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <div class="project-placeholder" style="background:linear-gradient(135deg,#1a3a2a,#10B981)">
+                <span>🏠</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Full Stack</span>
+              <h3 class="project-name">Chukwujekwu Real Estate</h3>
+              <p class="project-desc">A real estate listing platform for Nigeria with property search, agent profiles, and inquiry management.</p>
+              <div class="project-links">
+                <a href="https://chukwujekwu-real-estate-nigeria-dev.vercel.app" target="_blank" class="btn btn-primary btn-sm">Live Site</a>
+                <a href="https://github.com/purecomic" target="_blank" class="btn btn-outline btn-sm">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <div class="project-placeholder" style="background:linear-gradient(135deg,#2d1a3a,#8B5CF6)">
+                <span>🎵</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-tag">E-Commerce</span>
+              <h3 class="project-name">Mainedit</h3>
+              <p class="project-desc">A sound effects marketplace where creators can browse, preview, and purchase audio packs for their projects.</p>
+              <div class="project-links">
+                <a href="https://mainedit.vercel.app" target="_blank" class="btn btn-primary btn-sm">Live Site</a>
+                <a href="https://github.com/purecomic" target="_blank" class="btn btn-outline btn-sm">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-container">
+
+        <div class="section-header">
+          <div class="section-tag">Contact</div>
+          <h2 class="section-title">Let's Build Something Great</h2>
+          <p class="section-subtitle">Ready to start your project? Reach out and I'll get back to you within 24 hours.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">💬</div>
+              <div>
+                <div class="contact-label">WhatsApp</div>
+                <a href="https://wa.me/2348024531430" target="_blank" class="contact-value">+234 802 453 1430</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">Location</div>
+                <div class="contact-value">Nigeria 🇳🇬</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">⏱</div>
+              <div>
+                <div class="contact-label">Response Time</div>
+                <div class="contact-value">Within 24 hours</div>
+              </div>
+            </div>
+            <a href="https://wa.me/2348024531430?text=Hi%20Kingsley%2C%20I%20want%20to%20hire%20you%20for%20a%20web%20project"
+               target="_blank" class="btn btn-primary whatsapp-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.054 23.447a.75.75 0 0 0 .917.942l5.702-1.494A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.658-.523-5.168-1.432l-.361-.214-3.737.979.997-3.645-.235-.374A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+
+          <form class="contact-form" id="contact-form" onsubmit="handleContactForm(event)">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-input" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">WhatsApp / Phone</label>
+              <input type="tel" class="form-input" placeholder="+234 800 000 0000" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Service Needed</label>
+              <select class="form-input form-select">
+                <option value="">Select a package</option>
+                <option>Basic Website — ₦60,000+</option>
+                <option>Standard Website — ₦100,000+</option>
+                <option>E-Commerce Store — ₦150,000+</option>
+                <option>Full Stack App — ₦250,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Project Details</label>
+              <textarea class="form-input form-textarea" placeholder="Tell me about your project..." rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Send Message via WhatsApp
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="brand-icon" style="width:30px;height:30px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </span>
+        Kingsley Web Studio
+      </div>
+      <p class="footer-copy">© 2025 Kingsley Web Studio. Built with ❤️ in Nigeria.</p>
+      <a href="admin.html" class="footer-admin">Admin</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
