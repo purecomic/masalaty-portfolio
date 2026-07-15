@@ -71,7 +71,8 @@
 
   /* ── Parallax shapes ── */
   const shapes = document.querySelectorAll('.shape');
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const isDesktop = window.innerWidth >= 900;
+  if (isDesktop && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     window.addEventListener('scroll', () => {
       shapes.forEach((shape, i) => {
         shape.style.transform = `translateY(${window.scrollY * (i % 2 === 0 ? 0.07 : 0.04) * (i + 1)}px)`;
